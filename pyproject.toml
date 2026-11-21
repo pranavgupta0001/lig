@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lig"
+version = "0.1.0"
+description = "Machine learning predictions for laser-induced graphene"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+ml = ["numpy>=1.26,<3", "scikit-learn>=1.4,<2", "xgboost>=2.0,<3"]
+rdkit = ["rdkit>=2023.9.6,<2027"]
+bert = ["transformers>=5.10,<6", "torch>=2.10,<3"]
+
+[tool.setuptools.packages.find]
+include = ["lig*"]
